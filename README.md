@@ -1,3 +1,15 @@
+My Setup
+==============================================================
+Install:
+	
+	sudo modprobe v4l2loopback
+Video file (MP4) to virtual camera:
+
+	ffmpeg -re -i input.mp4 -map 0:v -f v4l2 /dev/video0
+
+https://askubuntu.com/questions/881305/is-there-any-way-ffmpeg-send-video-to-dev-video0-on-ubuntu
+https://unix.stackexchange.com/questions/528400/how-can-i-stream-my-desktop-screen-to-dev-video1-as-a-fake-webcam-on-linux
+
 v4l2loopback - a kernel module to create V4L2 loopback devices
 ==============================================================
 
